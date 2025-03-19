@@ -12,7 +12,7 @@ echo "App to launch: $APP_PACKAGE"
 
 while true; do
     # Monitor logcat for the specified key event
-    logcat -v brief -T 146 -d | grep --line-buffered "$KEY_EVENT" >/dev/null
+    logcat -v brief -T 136 -d | grep --line-buffered "$KEY_EVENT" >/dev/null
 
     if [ $? -eq 0 ]; then
         echo "Key event detected. Launching $APP_PACKAGE..."
@@ -24,7 +24,7 @@ while true; do
 
     # Small delay to prevent overload
     # Maybe needs to button smashing methode
-    sleep 2
+    sleep 1
 done
 
 exit 0
