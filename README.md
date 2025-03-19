@@ -4,6 +4,16 @@ Remap Fire TV remote keys to launch specific applications using ADB
 ![grafik](https://github.com/user-attachments/assets/5c4ae020-83d3-47f1-bced-6724732fa814)
 
 
+## **Command Usage:**
+```sh
+/usr/bin/sh firetv-remapper.sh <KEY_EVENT> <APP_PACKAGE>
+```
+
+### Example default values:
+```sh
+/usr/bin/sh firetv-remapper.sh "KEYCODE_APP_3" "org.xbmc.kodi/.Splash"
+``` 
+
 ## 1. How to Install and Use with ADB
 
 ### Step 1: Enable ADB on Fire TV
@@ -17,7 +27,8 @@ Run the following command from your computer:
 adb connect <FIRE_TV_IP>
 ```
 
-### Step 3: Push and Run the Script
+### Step 3: Push and Run the Script /w default parameters (KEY_3 and Kodi)
+
 ```sh
 adb push firetv-remapper.sh /sdcard/
 adb shell "sh /sdcard/firetv-remapper.sh"
